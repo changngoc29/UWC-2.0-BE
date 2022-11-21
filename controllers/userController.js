@@ -8,7 +8,7 @@ exports.checkID = (req, res, next, val) => {
   if (req.params.id * 1 > users.length) {
     return res.status(404).json({
       status: 'fail',
-      message: 'Invalid ID',
+      message: 'Invalid ID'
     });
   }
 
@@ -25,8 +25,7 @@ exports.checkBody = (req, res, next) => {
   ) {
     return res.status(400).json({
       status: 'fail',
-      message:
-        'Missing one of these fields: name, email, role, password, phone',
+      message: 'Missing one of these fields: name, email, role, password, phone'
     });
   }
 
@@ -38,56 +37,82 @@ exports.getAllUsers = (req, res) => {
     status: 'success',
     results: users.length,
     data: {
-      users,
-    },
+      users
+    }
   });
 };
 
 exports.getUser = (req, res) => {
   const id = req.params.id * 1;
 
-  const user = users.find((el) => el.id === id);
+  const user = users.find(el => el.id === id);
 
   res.status(200).json({
     status: 'success',
     data: {
-      user,
-    },
+      user
+    }
   });
 };
 
 exports.createUser = (req, res) => {
-  const newID = users[tours.users - 1].id + 1;
+  const newID = users[users.length - 1].id + 1;
   const newUser = Object.assign({ id: newID }, req.body);
 
+  console.log(req.body);
+  console.log(newUser);
   users.push(newUser);
 
   fs.writeFile(
     `${__dirname}/../data/userData.json`,
     JSON.stringify(users),
-    (err) => {
+    err => {
       res.status(201).json({
         status: 'success',
         data: {
-          user: newUser,
-        },
+          user: newUser
+        }
       });
     }
   );
 };
 
 exports.updateUser = (req, res) => {
-  res.status(200).json({
-    status: 'success',
-    data: {
-      user: '<updated user here>',
-    },
+  const id = req.params.id * 1;
+  let updateUser = {};
+  users.map(user => {
+    if (user.id === id) {
+      updateUser = Object.assign(user, req.body);
+      user = updateUser;
+    }
   });
+
+  fs.writeFile(
+    `${__dirname}/../data/userData.json`,
+    JSON.stringify(users),
+    err => {
+      res.status(200).json({
+        status: 'success',
+        data: {
+          user: updateUser
+        }
+      });
+    }
+  );
 };
 
 exports.deleteUSer = (req, res) => {
-  res.status(204).json({
-    status: 'success',
-    data: null,
-  });
+  const id = req.params.id * 1;
+  const newUsers = users.filter(user => user.id !== id);
+
+  fs.writeFile(
+    `${__dirname}/../data/userData.json`,
+    JSON.stringify(newUsers),
+    err => {
+      res.status(204).json({
+        status: 'success',
+        data: null
+      });
+    }
+  );
 };
