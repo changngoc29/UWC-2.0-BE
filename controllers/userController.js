@@ -57,8 +57,6 @@ exports.createUser = (req, res) => {
   const newID = users[users.length - 1].id + 1;
   const newUser = Object.assign({ id: newID }, req.body);
 
-  console.log(req.body);
-  console.log(newUser);
   users.push(newUser);
 
   fs.writeFile(
