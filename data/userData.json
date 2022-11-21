@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Nguyen Thanh Duy An",
+    "status": "Unavailable",
+    "email": "an.nguyen@gmail.com",
+    "phone": "0965529766",
+    "role": "collector",
+    "password": "123456"
+  },
+  {
+    "id": 2,
+    "name": "Nguyen Hiep",
+    "status": "Available",
+    "email": "hiep.nguyen@gmail.com",
+    "phone": "09090999999",
+    "role": "janitor",
+    "password": "123456"
+  },
+  {
+    "id": 3,
+    "name": "Vu Viet Hung",
+    "status": "Available",
+    "email": "rei.vu@gmail.com",
+    "phone": "0965529711",
+    "role": "backofficer",
+    "password": "123456"
+  },
+  {
+    "id": 4,
+    "name": "Vo Duy Hung",
+    "status": "Unavailable",
+    "email": "hung.vocsk20@gmail.com",
+    "phone": "0165529754",
+    "role": "janitor",
+    "password": "123456"
+  },
+  {
+    "id": 5,
+    "name": "Vo Trung Kien",
+    "status": "Available",
+    "email": "vtkienn@gmail.com",
+    "phone": "0941419092",
+    "role": "collector",
+    "password": "123456"
+  }
+]
