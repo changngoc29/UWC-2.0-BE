@@ -3,8 +3,6 @@ const fs = require('fs');
 const users = JSON.parse(fs.readFileSync(`${__dirname}/../data/userData.json`));
 
 exports.checkID = (req, res, next, val) => {
-  console.log(val);
-
   if (req.params.id * 1 > users.length) {
     return res.status(404).json({
       status: 'fail',
