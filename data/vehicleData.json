@@ -6,14 +6,14 @@
     "vehiclesType": "pickup truck",
     "insurer-id": 1,
     "area": "District 10",
-    "status": "pending task"
+    "status": "pending"
   },
   {
     "id": 2,
     "liscense": "13H-6 39285",
     "name": "BMW Model",
     "vehiclesType": "pickup truck",
-    "insurer-id": 2,
+    "insurer-id": -1,
     "area": "Tan Phu District",
     "status": "available"
   },
@@ -22,7 +22,7 @@
     "liscense": "11Z-7 13245",
     "name": "Toyota Model",
     "vehiclesType": "Truck",
-    "insurer-id": 3,
+    "insurer-id": -1,
     "area": "Tan Binh District",
     "status": "unavailable"
   },
@@ -31,16 +31,16 @@
     "liscense": "12K-6 33514",
     "name": "Honda Model",
     "vehiclesType": "pickup truck",
-    "insurer-id": -1,
+    "insurer-id": 1,
     "area": "Go Vap District",
-    "status": "pending task"
+    "status": "pending"
   },
   {
     "id": 5,
     "liscense": "1L-56 51654",
     "name": "Subaru Model",
     "vehiclesType": "Truck",
-    "insurer-id": 2,
+    "insurer-id": 1,
     "area": "Thu Duc District",
     "status": "unavailable"
   }

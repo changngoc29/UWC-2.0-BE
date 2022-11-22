@@ -31,11 +31,20 @@ exports.checkBody = (req, res, next) => {
 };
 
 exports.getAllUsers = (req, res) => {
+  let results = users;
+  if (req.query) {
+    if (req.query.role) {
+      results = results.filter(result => result.role === req.query.role);
+    }
+    if (req.query.status) {
+      results = results.filter(result => result.status === req.query.status);
+    }
+  }
   res.status(200).json({
     status: 'success',
-    results: users.length,
+    results: results.length,
     data: {
-      users
+      results
     }
   });
 };
