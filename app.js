@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const dotenv = require('dotenv');
+const cors = require('cors');
 
 dotenv.config({ path: './config.env' });
 
@@ -9,6 +10,7 @@ const taskRouter = require('./routes/taskRouter');
 
 const app = express();
 
+app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
 
