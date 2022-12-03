@@ -7,7 +7,8 @@ exports.checkLogin = (req, res) => {
     if (user.email === req.body.email && user.password === req.body.password) {
       return res.status(201).json({
         status: 'success',
-        id: user.id
+        id: user.id,
+        role: user.role
       });
     }
   }

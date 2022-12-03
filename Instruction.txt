@@ -1,0 +1,13 @@
+Api for task: 
+- Get all task: GET http://127.0.0.1:8080/api/v1/tasks 
+- Create a task: POST http://127.0.0.1:8080/api/v1/tasks 
+    + Noi dung tai len khi create task:
+        JSON, neu type la collector thi co them vehicleId
+            {
+            "employeeId": 2052999,
+            "mcpId": 1,
+            "type": "janitor"
+            }
+  
+ - Update task when finished: GET http://127.0.0.1:8080/api/v1/tasks/update/(id of task) 
+    Example: http://127.0.0.1:8080/api/v1/tasks/update/2
