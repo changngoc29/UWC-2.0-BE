@@ -1,101 +1,101 @@
 [
-  {
-    "id": 1,
-    "location": "Independence Palace",
-    "address": "Ben Than Quan, Ho Chi Minh City",
-    "status": "empty",
-    "employee-id": 2053625,
-    "geo-location": {
-      "lat":10.7728,
-      "lng":106.6905
+    {
+        "id": 1,
+        "location": "Independence Palace",
+        "address": "Ben Than Quan, Ho Chi Minh City",
+        "status": "full",
+        "employee-id": 2053625,
+        "geo-location": {
+            "lat": 10.7728,
+            "lng": 106.6905
+        }
+    },
+    {
+        "id": 2,
+        "location": "Dong Khoi Street",
+        "address": "Ben Nghe, District 1, Ho Chi Minh",
+        "status": "empty",
+        "employee-id": 2052999,
+        "geo-location": {
+            "lat": 10.776368,
+            "lng": 106.7024689
+        }
+    },
+    {
+        "id": 3,
+        "location": "Cao Dai Temple",
+        "address": "3/10 Kha Van Can, Linh Trung, Thu Duc District, Ho Chi Minh",
+        "status": "full",
+        "employee-id": -1,
+        "geo-location": {
+            "lat": 10.7546509,
+            "lng": 106.6794698
+        }
+    },
+    {
+        "id": 4,
+        "location": "Bitexco Financial Tower",
+        "address": "36 Ho Tung Mau, District 1, Ho Chi Minh",
+        "status": "progress",
+        "employee-id": -1,
+        "geo-location": {
+            "lat": 10.7697,
+            "lng": 106.7027
+        }
+    },
+    {
+        "id": 5,
+        "location": "Saigon Opera House",
+        "address": "7 Lam Sons Sq., Ho Chi Minh City",
+        "status": "progress",
+        "employee-id": 2053163,
+        "geo-location": {
+            "lat": 10.776506,
+            "lng": 106.7031
+        }
+    },
+    {
+        "id": 6,
+        "location": "Vinh Nghiem Pagoda",
+        "address": "339 Nam Ki Khoi Nghia, District 3, Ho Chi Minh",
+        "status": "progress",
+        "employee-id": 2053163,
+        "geo-location": {
+            "lat": 10.79041,
+            "lng": 106.68225
+        }
+    },
+    {
+        "id": 7,
+        "location": "Museum of Ho Chi Minh City",
+        "address": "65 Ly Tu Trong, Ben Nghe, District 1, Ho Chi Minh",
+        "status": "progress",
+        "employee-id": 2052858,
+        "geo-location": {
+            "lat": 21.03562,
+            "lng": 105.83264
+        }
+    },
+    {
+        "id": 8,
+        "location": "Ho Chi Minh City Zoo",
+        "address": "2 Nguyen Binh Khiem, Ben Nghe, District 1, Ho Chi Minh",
+        "status": "full",
+        "employee-id": 2052999,
+        "geo-location": {
+            "lat": 10.78818,
+            "lng": 106.70646
+        }
+    },
+    {
+        "id": 9,
+        "location": "Jade Emperor Pagoda",
+        "address": "73 Mai Thi Luu, District 1, Ho Chi Minh",
+        "status": "empty",
+        "employee-id": 2053625,
+        "geo-location": {
+            "lat": 10.7917,
+            "lng": 106.69787
+        }
     }
-  },
-  {
-    "id": 2,
-    "location": "Dong Khoi Street",
-    "address": "Ben Nghe, District 1, Ho Chi Minh",
-    "status": "empty",
-    "employee-id": 2052999,
-    "geo-location": {
-      "lat":10.776368,
-      "lng":106.7024689
-    }
-  },
-  {
-    "id": 3,
-    "location": "Cao Dai Temple",
-    "address": "3/10 Kha Van Can, Linh Trung, Thu Duc District, Ho Chi Minh",
-    "status": "full",
-    "employee-id": -1,
-    "geo-location": {
-      "lat":10.7546509,
-      "lng":106.6794698
-    }
-  },
-  {
-    "id": 4,
-    "location": "Bitexco Financial Tower",
-    "address": "36 Ho Tung Mau, District 1, Ho Chi Minh",
-    "status": "full",
-    "employee-id": -1,
-    "geo-location": {
-      "lat":10.7697,
-      "lng":106.7027
-    }
-  },
-  {
-    "id": 5,
-    "location": "Saigon Opera House",
-    "address": "7 Lam Sons Sq., Ho Chi Minh City",
-    "status": "full",
-    "employee-id": 2053163,
-    "geo-location": {
-      "lat":10.776506,
-      "lng":106.7031
-    }
-  },
-  {
-    "id": 6,
-    "location": "Vinh Nghiem Pagoda",
-    "address": "339 Nam Ki Khoi Nghia, District 3, Ho Chi Minh",
-    "status": "progress",
-    "employee-id": 2053163,
-    "geo-location": {
-      "lat":10.79041,
-      "lng":106.68225
-    }
-  },
-  {
-    "id": 7,
-    "location": "Museum of Ho Chi Minh City",
-    "address": "65 Ly Tu Trong, Ben Nghe, District 1, Ho Chi Minh",
-    "status": "progress",
-    "employee-id": 2052858,
-    "geo-location": {
-      "lat":21.03562,
-      "lng":105.83264
-    }
-  },
-  {
-    "id": 8,
-    "location": "Ho Chi Minh City Zoo",
-    "address": "2 Nguyen Binh Khiem, Ben Nghe, District 1, Ho Chi Minh",
-    "status": "progress",
-    "employee-id": 2052999,
-    "geo-location": {
-      "lat":10.78818,
-      "lng":106.70646
-    }
-  },
-  {
-    "id": 9,
-    "location": "Jade Emperor Pagoda",
-    "address": "73 Mai Thi Luu, District 1, Ho Chi Minh",
-    "status": "progress",
-    "employee-id": 2053625,
-    "geo-location": {
-      "lat":10.7917,
-      "lng":106.69787
-    }
-  }
 ]
