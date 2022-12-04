@@ -29,7 +29,7 @@
   {
     "id": 2053625,
     "name": "Vo Duy Hung",
-    "status": "Available",
+    "status": "Pending task",
     "email": "hung.vocsk20@gmail.com",
     "phone": "0165529754",
     "role": "janitor",
@@ -38,7 +38,7 @@
   {
     "id": 2053163,
     "name": "Vo Trung Kien",
-    "status": "Available",
+    "status": "Pending task",
     "email": "vtkienn@gmail.com",
     "phone": "0941419092",
     "role": "collector",
