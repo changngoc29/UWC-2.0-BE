@@ -17,28 +17,28 @@
     "id": 3,
     "location": "Cao Dai Temple",
     "address": "3/10 Kha Van Can, Linh Trung, Thu Duc District, Ho Chi Minh",
-    "status": "empty",
+    "status": "progress",
     "employee-id": -1
   },
   {
     "id": 4,
     "location": "Bitexco Financial Tower",
     "address": "36 Ho Tung Mau, District 1, Ho Chi Minh",
-    "status": "empty",
+    "status": "full",
     "employee-id": -1
   },
   {
     "id": 5,
     "location": "Saigon Opera House",
     "address": "7 Lam Sons Sq., Ho Chi Minh City",
-    "status": "empty",
+    "status": "full",
     "employee-id": 2053163
   },
   {
     "id": 6,
     "location": "Vinh Nghiem Pagoda",
     "address": "339 Nam Ki Khoi Nghia, District 3, Ho Chi Minh",
-    "status": "progress",
+    "status": "full",
     "employee-id": 2053163
   },
   {
