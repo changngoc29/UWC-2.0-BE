@@ -10,6 +10,7 @@ router
   .post(taskController.createTask);
 
 router.route('/update/:id').get(taskController.updateTask);
+router.route('/delete/:id').delete(taskController.deleteTask);
 
 router.route('/vehicles').get(taskController.getAllVehicles);
 router.route('/mcps').get(taskController.getAllMCPs);

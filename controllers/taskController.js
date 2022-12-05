@@ -93,11 +93,16 @@ const updateVehicleStatus = (id, status) => {
 };
 
 exports.createTask = (req, res) => {
-  const newID = tasks[tasks.length - 1].id + 1;
-  const newTask = Object.assign({ id: newID, status: 'pending' }, req.body);
+  let newID;
+  if (tasks.length === 0) newID = 0;
+  else newID = tasks[tasks.length - 1].id + 1;
+  const newTask = Object.assign(req.body, { id: newID, status: 'pending' });
 
   updateUserStatus(newTask.employeeId, 'Pending task');
-  updateMCPStatus(newTask.mcpId, 'progress');
+
+  if (newTask.type === 'janitor') {
+    updateMCPStatus(newTask.mcpId, 'progress');
+  }
 
   if (newTask.type === 'collector') {
     updateVehicleStatus(newTask.vehicleId, 'pending task');
@@ -124,9 +129,9 @@ exports.updateTask = (req, res) => {
   tasks.map(task => {
     if (task.id === id) {
       task.status = 'finished';
-      updateMCPStatus(task.mcpId, 'empty');
       updateUserStatus(task.employeeId, 'Available');
       if (task.type === 'collector') {
+        updateMCPStatus(task.mcpId, 'empty');
         updateVehicleStatus(task.vehicleId, 'available');
       }
     }
@@ -143,4 +148,28 @@ exports.updateTask = (req, res) => {
   );
 };
 
-exports.deleteTask = (req, res) => {};
+exports.deleteTask = (req, res) => {
+  const id = req.params.id * 1;
+  tasks.map(task => {
+    if (task.id === id) {
+      task.status = 'finished';
+      updateMCPStatus(task.mcpId, 'empty');
+      updateUserStatus(task.employeeId, 'Available');
+      if (task.type === 'collector') {
+        updateVehicleStatus(task.vehicleId, 'available');
+      }
+    }
+  });
+
+  let results = tasks.filter(task => task.id !== id);
+
+  fs.writeFile(
+    '${__dirname}/../data/taskData.json',
+    JSON.stringify(results),
+    err => {
+      res.status(204).json({
+        status: 'success'
+      });
+    }
+  );
+};
