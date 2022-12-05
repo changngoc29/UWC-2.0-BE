@@ -152,8 +152,12 @@ exports.deleteTask = (req, res) => {
   const id = req.params.id * 1;
   tasks.map(task => {
     if (task.id === id) {
-      task.status = 'finished';
-      updateMCPStatus(task.mcpId, 'empty');
+      if (task.type === 'janitor') {
+        updateMCPStatus(task.mcpId, 'empty');
+      }
+      if (task.type === 'collector') {
+        updateMCPStatus(task.mcpId, 'full');
+      }
       updateUserStatus(task.employeeId, 'Available');
       if (task.type === 'collector') {
         updateVehicleStatus(task.vehicleId, 'available');
